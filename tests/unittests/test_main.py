@@ -29,3 +29,9 @@ class TestMain:
 
     def test_negative_values(self: 'TestMain'):
         assert rank_wealth(-10) == 'Shrimp'
+
+    def test_slight_differences(self: 'TestMain'):
+        assert rank_wealth(501) == 'Shark'
+
+    def test_float_input(self: 'TestMain'):
+        assert rank_wealth(500.01) == 'Shark'
