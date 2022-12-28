@@ -25,7 +25,7 @@ class TestMain:
         result = None
         with contextlib.suppress(ValueError):
             result = rank_wealth('gibberish')
-        assert isinstance(result, None)
+        assert result is None
 
     def test_negative_values(self: 'TestMain'):
         assert rank_wealth(-10) == 'Shrimp'
