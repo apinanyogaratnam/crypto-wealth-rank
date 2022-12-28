@@ -1,4 +1,4 @@
-from base_python_package_template.main import greetings
+from crypto_wealth_rank.main import greetings
 
 
 class TestMain:
