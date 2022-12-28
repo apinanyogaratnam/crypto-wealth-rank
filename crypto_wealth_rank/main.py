@@ -3,18 +3,25 @@ def rank_wealth(balance: float | int | None) -> str | None:
         return None
 
     wealth_ranks = {
-        '1': 'Shrimp',
-        '10': 'Crab',
-        '50': 'Octopus',
-        '100': 'Fish',
-        '500': 'Dolphin',
-        '1000': 'Shark',
-        '5000': 'Whale',
+        1: 'Shrimp',
+        10: 'Crab',
+        50: 'Octopus',
+        100: 'Fish',
+        500: 'Dolphin',
+        1000: 'Shark',
+        5000: 'Whale',
     }
 
     try:
-        balance = str(float(balance))
+        balance = float(balance)
     except ValueError as error:
         raise ValueError('balance must be an integer or a float') from error
 
-    return wealth_ranks.get(balance, 'HumpBack Whale')
+    return next(
+        (
+            rank
+            for rank_balance, rank in wealth_ranks.items()
+            if balance <= rank_balance
+        ),
+        'HumpBack Whale',
+    )
