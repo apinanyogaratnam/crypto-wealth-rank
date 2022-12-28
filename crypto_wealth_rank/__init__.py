@@ -1,5 +1,5 @@
-from crypto_wealth_rank.main import greetings
+from crypto_wealth_rank.main import rank_wealth
 
 __all__ = [
-    greetings,
+    rank_wealth,
 ]
