@@ -1,6 +1,6 @@
 # Base Python Template
 
-[repo]: base-python-package-template
+[repo]: crypto-wealth-rank
 
 [![Downloads](https://static.pepy.tech/personalized-badge/[repo]?period=total&units=none&left_color=grey&right_color=green&left_text=Downloads)](https://pepy.tech/project/[repo])
 
