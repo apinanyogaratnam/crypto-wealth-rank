@@ -24,3 +24,6 @@ workflow:
 	make build
 	make upload
 	make tag
+
+test:
+	pytest .
