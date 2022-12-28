@@ -21,6 +21,8 @@ class TestMain:
 
     def test_error_handling(self: 'TestMain'):
         assert rank_wealth(None) is None
+
+        result = None
         with contextlib.suppress(ValueError):
             result = rank_wealth('gibberish')
         assert isinstance(result, None)
