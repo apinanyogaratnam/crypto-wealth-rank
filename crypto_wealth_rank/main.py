@@ -14,7 +14,7 @@ def rank_wealth(balance: float | int | None) -> str | None:
 
     try:
         balance = str(float(balance))
-    except ValueError as e:
-        raise ValueError('balance must be an integer or a float') from e
+    except ValueError as error:
+        raise ValueError('balance must be an integer or a float') from error
 
     return wealth_ranks.get(balance, 'HumpBack Whale')
